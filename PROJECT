@@ -1,0 +1,7 @@
+domain: example.org
+repo: github.com/alexeldeib/test-hook
+resources:
+- group: ship
+  kind: Frigate
+  version: v1beta1
+version: "2"
