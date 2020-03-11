@@ -5,8 +5,11 @@ import (
 
 	apiv1beta1 "github.com/alexeldeib/test-hook/api/v1beta1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
+	"sigs.k8s.io/controller-runtime/pkg/runtime/inject"
 	"sigs.k8s.io/controller-runtime/pkg/webhook/admission"
 )
+
+var _ inject.Client = &MyTypeValidator{}
 
 type MyTypeValidator struct {
 	client.Client
